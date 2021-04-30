@@ -1,0 +1,264 @@
+
+html
+{
+
+background-image: linear-gradient(175deg, #000000 0%, #2c3e50 74%);
+background-position: bottom;
+
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: rgb(146, 146, 146);
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html, body{
+	width:100%; 
+	height:100%; 
+	padding:0px; 
+	margin:0px;
+	overflow: hidden;
+	background: #191d1e; /* Old browsers */ /* FF3.6+ */ /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */
+	background: linear-gradient(0deg,  #191d1e 50%,#283139 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#191d1e', endColorstr='#283139',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	background-attachment: fixed
+}
+
+#projector {
+  position: absolute; 
+  top: 0px;
+  left: 0px;
+  width:100%;
+  height:100%;
+}
+
+.center-div {
+	width:580px;
+    height:374px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-left: -290px;
+    margin-top:  -187px;
+}
+
+#preloaderDiv
+{
+	position:absolute;
+	left:50%;
+    top:50%;
+    margin-left: -27px;
+    margin-top:  -27px;
+}
+
+img{
+    
+    height: auto;
+    background-color: transparent;
+    border-radius: 30px; 
+    
+
+}
+
+h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+p {
+    margin: 0;
+  }
+
+.spacer {
+    flex: 1;
+  }
+
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+    color: white;
+    font-weight: 600;
+    
+  }
+
+.toolbar img {
+    margin: 0 16px;
+  }
+
+.toolbar #twitter-logo {
+    height: 40px;
+    margin: 0 8px;
+  }
+
+.toolbar #youtube-logo {
+    height: 40px;
+    margin: 0 16px;
+  }
+
+.toolbar #twitter-logo:hover,
+  .toolbar #youtube-logo:hover {
+    opacity: 0.8;
+  }
+
+.content {
+    display: flex;
+    margin: 60px auto 32px;
+    padding: 16px 16px;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+svg.material-icons {
+    height: 24px;
+    width: auto;
+  }
+
+svg.material-icons:not(:last-child) {
+    margin-right: 8px;
+  }
+
+.card svg.material-icons path {
+    fill: #888;
+  }
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-top: 16px;
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+
+.card {
+    border-radius: 30px;
+    background-color: transparent;
+    height: 140px;
+    width: 140px;
+    margin: 0 40px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: left;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+.card-container .card:not(:last-child) {
+    margin-right: 0;
+  }
+
+.card.card-small {
+    height: 16px;
+    width: 168px;
+  }
+
+.card-container .card:not(.highlight-card) {
+    cursor: pointer;
+  }
+
+.card-container .card:not(.highlight-card):hover {
+    transform: translateY(10px);
+    box-shadow: 0 5px 20px rgb(0, 0, 0);
+  }
+
+.card-container .card:not(.highlight-card):hover .material-icons path {
+    fill: rgb(105, 103, 103);
+  }
+
+.card.highlight-card {
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+    border: none;
+    width: auto;
+    min-width: 30%;
+    position: relative;
+  }
+
+.card.card.highlight-card span {
+    margin-left: 60px;
+  }
+
+svg#rocket {
+    width: 80px;
+    position: absolute;
+    left: -10px;
+    top: -24px;
+  }
+
+svg#rocket-smoke {
+    height: calc(100vh - 95px);
+    position: absolute;
+    top: 10px;
+    right: 180px;
+    z-index: -10;
+  }
+
+a,
+  a:visited,
+  a:hover {
+    color: #1976d2;
+    text-decoration: none;
+  }
+
+a:hover {
+    color: #125699;
+  }
+
+.terminal {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 6px;
+    padding-top: 45px;
+    margin-top: 8px;
+    overflow: hidden;
+    background-color: rgb(15, 15, 16);
+  }
+
+/* Responsive Styles */
+
+@media screen and (max-width: 767px) {
+
+    .card-container > *:not(.circle-link) ,
+    .terminal {
+      width: 100%;
+    }
+
+    .card:not(.highlight-card) {
+      height: 16px;
+      margin: 8px 0;
+    }
+
+    .card.highlight-card span {
+      margin-left: 72px;
+    }
+
+    svg#rocket-smoke {
+      right: 120px;
+      transform: rotate(-5deg);
+    }
+  }
+
+@media screen and (max-width: 575px) {
+    svg#rocket-smoke {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+
+/*# sourceMappingURL=styles.css.map*/
